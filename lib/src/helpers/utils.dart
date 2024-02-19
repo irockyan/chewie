@@ -5,7 +5,7 @@ String formatDuration(Duration position) {
   final int hours = seconds ~/ 3600;
   seconds = seconds % 3600;
   final minutes = seconds ~/ 60;
-  seconds = seconds % 60;
+  seconds = (seconds / 60).round();
 
   final hoursString = hours >= 10
       ? '$hours'
